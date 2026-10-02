@@ -11,3 +11,11 @@ wheels/
 
 # Database
 *.sqlite3
+
+# Collected static files
+staticfiles/
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
