@@ -7,4 +7,4 @@ install:
   - uv sync
 
 script:
-  - python manage.py test
+  - uv run manage.py test
