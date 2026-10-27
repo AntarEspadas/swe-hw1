@@ -8,6 +8,7 @@ install:
   - uv sync
 
 script:
+  - uv run black --check .
   - uv run manage.py test
 
 deploy:
@@ -16,5 +17,4 @@ deploy:
   secret_access_key: '$AWS_SECRET_ACCESS_KEY'
   region: us-east-1
   app: swe-ae3144
-  env: dev
   bucket: elasticbeanstalk-us-east-1-992382631724
