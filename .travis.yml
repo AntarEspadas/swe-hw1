@@ -9,3 +9,12 @@ install:
 
 script:
   - uv run manage.py test
+
+deploy:
+  provider: elasticbeanstalk
+  access_key_id: '$AWS_ACCESS_KEY_ID'
+  secret_access_key: '$AWS_SECRET_ACCESS_KEY'
+  region: us-east-1
+  app: swe-ae3144
+  env: dev
+  bucket: elasticbeanstalk-us-east-1-992382631724
