@@ -9,7 +9,9 @@ install:
 
 script:
   - uv run black --check .
-  - uv run manage.py test
+  - uv run flake8
+  - uv run coverage run manage.py test
+  - uv run coveralls
 
 deploy:
   provider: elasticbeanstalk
